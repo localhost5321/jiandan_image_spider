@@ -1,5 +1,4 @@
 import java.io.InputStream;
-
 import org.apache.http.client.config.CookieSpecs;
 import org.apache.http.client.config.RequestConfig;
 import org.apache.http.client.methods.CloseableHttpResponse;
@@ -7,12 +6,9 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 
-
-
 /**
- * 
- * 2015-9-3
- * @author nbsa
+ * @time 2015-9-3
+ * @author  
  * @description
  */
 public class SimpleSpider {
@@ -30,7 +26,7 @@ public class SimpleSpider {
 			httpGet.addHeader("Cookie","_gat=1; nsfw-click-load=off; gif-click-load=on; _ga=GA1.2.1861846600.1423061484");
 			try {
 				//不敢爬太快
-				Thread.sleep(5000);
+				Thread.sleep(2000);
 				//发送请求，并执行
 				CloseableHttpResponse response = httpClient.execute(httpGet);
 				InputStream in = response.getEntity().getContent();

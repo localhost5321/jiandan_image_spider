@@ -1,8 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
 
-
-
 public class JianDanHtmlParser implements Runnable {
 	private String html;
 	private int page;
@@ -33,7 +31,7 @@ public class JianDanHtmlParser implements Runnable {
 		for(String imageUrl : list){
 			if(imageUrl.indexOf("sina")>0){
 				new Thread(new JianDanImageCreator(imageUrl,page)).start();
-			}
+			} 
 		}
 	}
 }
